@@ -112,7 +112,7 @@ public class SensibleStacks
         LOGGER.info("The minecraft server has started!");
         TagKey<Item> EGGS_TAG = TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "eggs"));
         TagKey<Item> PEARLS_TAG = TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("forge", "ender_pearls"));
-        TagKey<Item> MUSIC_DISKS_TAG = TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("minecraft", "music_discs"));
+        TagKey<Item> MUSIC_DISCS_TAG = TagKey.create(ForgeRegistries.ITEMS.getRegistryKey(), new ResourceLocation("minecraft", "music_discs"));
 
         ForgeRegistries.ITEMS.getValues().forEach((item) ->
         {
@@ -130,7 +130,7 @@ public class SensibleStacks
                     LOGGER.error("Could not change the max stack-size of " + item + ", exception: " + e);
                 }
             }
-            else if (Config.enableMusicDiskStacking && item.builtInRegistryHolder().containsTag(MUSIC_DISKS_TAG)) {
+            else if (Config.enableMusicDiscStacking && item.builtInRegistryHolder().containsTag(MUSIC_DISCS_TAG)) {
                 try {
                     ObfuscationReflectionHelper.setPrivateValue(Item.class, item, 16, "f_41370_");
                 } catch (Exception e) {

@@ -58,9 +58,9 @@ public class Config
             .comment("Make all sorts of beds stack up to 16")
             .define("enableBedStacking", true);
 
-    public static final ForgeConfigSpec.BooleanValue ENABLE_MUSIC_DISK_STACKING = BUILDER
-            .comment("Make all Music Disks stack up to 16")
-            .define("enableMusicDiskStacking", true);
+    public static final ForgeConfigSpec.BooleanValue ENABLE_MUSIC_DISC_STACKING = BUILDER
+            .comment("Make all Music Discs stack up to 16")
+            .define("enableMusicDiscStacking", true);
 
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
@@ -77,7 +77,7 @@ public class Config
     public static boolean enableBoatStacking;
     public static boolean enableEnchantedBookStacking;
     public static boolean enableBedStacking;
-    public static boolean enableMusicDiskStacking;
+    public static boolean enableMusicDiscStacking;
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)
@@ -94,6 +94,6 @@ public class Config
         enableBoatStacking = ENABLE_BOAT_STACKING.get();
         enableEnchantedBookStacking = ENABLE_ENCHANTED_BOOK_STACKING.get();
         enableBedStacking = ENABLE_BED_STACKING.get();
-        enableMusicDiskStacking = ENABLE_MUSIC_DISK_STACKING.get();
+        enableMusicDiscStacking = ENABLE_MUSIC_DISC_STACKING.get();
     }
 }
